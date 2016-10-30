@@ -1,0 +1,18 @@
+<div class="dashboard">
+  <header>
+    <h1>Bucket List</h1>
+    <button type="button" ng-click="gotoHome()">Home</button>
+    <button type="button" ng-click="logout()">Logout</button>
+  </header>
+  <h1>{{ user }}'s Bucket List'</h1>
+  <div class="list" ng-show="list">
+    <h2>To Do:</h2>
+    <div class="list-item" ng-repeat="item in listItems | filter:{status: false}">
+      <label>{{ item['title'] }} | {{ item['desc'] }} | {{ item['createdAt'] }}</label>
+    </div>
+    <h2>Done:</h2>
+    <div class="list-item" ng-repeat="item in listItems | filter:{status: true}">
+      <label>{{ item['title'] }} | {{ item['desc'] }} | {{ item['createdAt'] }}</label>
+    </div>
+  </div>
+</div>

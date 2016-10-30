@@ -1,0 +1,10 @@
+<div class="login">
+  <h1>Bucket Lists</h1>
+  <form>
+    <label>
+      Name: <input type="text" ng-model="userName">
+    </label>
+    <p class="error" ng-show="loginError">{{ loginError }}</p>
+    <input type="submit" value="Enter" ng-click="loginUser()">
+  </form>
+</div>
